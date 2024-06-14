@@ -34,6 +34,24 @@ async function main() {
     },
   });
 
+  await prisma.mFoodstuff.upsert({
+    where: { name: 'Tepung' },
+    update: {},
+    create: {
+      name: 'Tepung',
+      description: 'A classic Italian dish',
+    },
+  });
+
+  await prisma.mFoodstuff.upsert({
+    where: { name: 'Tepung' },
+    update: {},
+    create: {
+      name: 'Tepung',
+      description: 'A classic Italian dish',
+    },
+  });
+
   console.log({ recipe1, recipe2 });
 }
 
